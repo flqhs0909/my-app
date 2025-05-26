@@ -1,0 +1,23 @@
+:root{
+
+    --col2222:#222222;
+    --col6666:#666666;
+    --col9999:#999999;
+    --colBBBB:#BBBBBB;
+    --colF1F1:#F1F1F1;
+    --colF8F8:#F8F8F8;
+    --colDEDE:#DEDEDE;
+    
+    --point:#E02C28;
+    --PSub01:#FFEDEC;
+    --PSub02:#FFF9F9;
+
+
+
+}
+
+
+input[type='text'], 
+input[type='password']{ border: 1px solid var(--colDEDE); border-radius: 4px;}
+
+.btn_01 { background-color: var(--point); color: #fff;border: none; border-radius: 4px; font-weight: bold;}

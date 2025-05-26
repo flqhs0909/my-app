@@ -1,0 +1,56 @@
+.pageWrap{display: flex; font-size: 13px; }
+.container{padding: 30px 40px;}
+header{display: flex; padding: 15px; align-items: center; border-bottom:2px solid #DEDEDE; box-shadow:0px 4px 4px 0px rgba(0, 0 , 0, 0.1);
+    > h1 {margin-right: 30px; }
+    > div { display: flex;width: 100%; justify-content: space-between; align-items: center;
+        > b {  font-size: 15px; font-weight: bold;}
+        .userSetting { display:  flex;align-items: center; 
+            strong{ font-weight: bold;margin-right: 30px; }
+            a{ color: var(--col9999);display: flex; height: 100%; align-items: center;
+                &::after{ content: ''; display: block; width: 1px; height: 12px;  margin: 0 10px; background-color: var(--colDEDE);}
+            }
+            button{display: flex; color: var(--col9999);
+
+            }
+
+        }
+    }
+ }
+
+/* 메뉴 */
+nav{width: 200px; background-color: #333333;
+    .menuWrap{ padding: 20px 25px; color: #fff;
+        >li { margin-bottom: 5px;
+            &:after{ content: ''; display: block; background-color: rgba(255, 255, 255, 0.1); width: 100%; height: 1px;margin: 25px 0; clear: both; }
+            strong { display: block; font-weight: bold; font-size: 15px; margin-bottom: 15px; }
+            >ul { 
+                li { margin-bottom: 15px; font-size: 13px;
+                    b{display: block; margin-bottom: 15px; }
+                    >a{ color: #fff;} 
+                    > ul { text-indent: 10px;
+                        li {
+                        b{ color: #ffffff;}
+                        ul li a {color: #ffffff; opacity: 0.7; }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+} 
+
+/* 로그인 */
+.loginPage {width: 100%; height: 100vh; display: flex;flex-direction: column; align-items: center; justify-content: center;
+    .loginAera{ display: flex; justify-content: center; align-items: center; flex-direction: column;
+        > img {margin-bottom: 40px;}
+        > form {width: 340px; padding:60px 40px ; display: flex; flex-direction: column; justify-content: center;  box-shadow:0 0  40px 0px rgba(0, 0, 0, 0.1);margin-bottom: 20px;
+            > p {text-align: center; margin-bottom: 20px; font-size: 20px ; font-weight: bold; margin-bottom: 20px ;}
+            > input { margin: 10px 0; padding: 12px 10px;}
+            > button {padding: 12px 0; margin: 20px 0; }
+        }
+    }
+    >  p{ font-size: 12px; color: var(--colBBBB);}   
+}
+
+
