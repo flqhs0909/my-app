@@ -7,7 +7,7 @@ export default function Header() {
   return (
   <header>
     <h1>
-      <Link><img src="../images/img_logo.svg" alt="로고이미지" /></Link>
+      <Link to='/main'><img src="../images/img_logo.svg" alt="로고이미지" /></Link>
     </h1>
     <div>
       <b>고객 DB 관리 시스템</b>

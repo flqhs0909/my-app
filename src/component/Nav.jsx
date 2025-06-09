@@ -9,8 +9,8 @@ import { Link, NavLink } from 'react-router-dom'
             <li>
                 <strong>고객 DB관리</strong>
                 <ul className='dep02'>
-                    <li><NavLink to='/Main'>통합 고객 목록</NavLink></li>
-                    <li><NavLink to='/'>고객 등록</NavLink></li>
+                    <li><NavLink to='/main'>통합 고객 목록</NavLink></li>
+                    <li><NavLink to='/signUp'>고객 등록</NavLink></li>
                 </ul>
             </li>
             <li >

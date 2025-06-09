@@ -5,7 +5,7 @@ import Alarm from '../component/Alarm';
 
 export default function Main() {
   return (
-    <div className='container'>
+    <div className='mainWrap'>
       <Alarm></Alarm>
     </div>
   )

@@ -1,3 +1,102 @@
 
 /* 공지사항 알림 */
-.AlarmBox {display: flex; padding:12px 20px ; background-color: var(--colF1F1);} 
+.AlarmBox {display: flex; padding:12px 20px ; background-color: var(--colF1F1); border-radius: 4px; margin-bottom: 60px;
+    > img{margin-right: 10px;  }
+    strong {font-weight: bold; font-size: 13px; margin-right: 40px;}
+    time{color: var(--col9999);margin-right: 10px;}
+    p{ 
+        &::after{content:url(../../public/images/ico_new.svg); clear: both;  margin: 0 8px;}
+    }
+} 
+/*영업사원 매인 - 매출현황 */
+.rangeWrap{ display: flex; border: 1px solid var(--colDEDE); width: 100%; padding: 20px; margin-bottom: 60px;
+    .rangeArea{ width: 50%; margin: 0 40px; align-content: center; 
+        progress{appearance: none; width: 100%; height: 40px; 
+            &::-webkit-progress-bar{ background: #FFFFFF;  }
+            &::-webkit-progress-value{ background:linear-gradient(to right, #A51E23 ,#E02C28);}
+            &::-webkit-progress-inner-element{ border: 1px solid var(--colDEDE);}
+
+        }
+    }
+    .achieveArea{ margin-left: 20px;
+        width: 36%;
+        > strong{font-size: 15px; font-weight: bold; margin-bottom:12px; display: block;}
+        >table { width: 100%; margin-bottom: 12px;
+            tr { border-width: 1px 0; border-style: solid; border-color: var(--colF1F1); padding: 15px 0;
+                > th {padding: 12px 10px ; background-color: var(--colF8F8);}
+                &:last-child{ color: var(--point);}
+            } 
+        }
+        > p{ color: var(--point); font-weight: bold; text-align: center;}
+     }
+}
+.tableArea{ 
+    .tTit{
+        display: flex; justify-content: space-between; align-items: center;
+    }
+    > table {width: 100%; 
+        thead{
+            tr{ 
+              th { text-align: left; padding: 20px 10px;  background-color: var(--colF8F8); font-weight: bold;
+                &:not(:first-child)::before{ content: '';display: inline-block; width: 1px; height: 12px; margin: 0 10px; background-color: var(--colDEDE);}
+            }
+            }
+        }
+        > tbody{
+            tr{ border-bottom: 1px solid var(--colF1F1);
+                td{
+                    padding: 20px 10px;
+                    &:not(:first-child){ padding-left: 33px;}
+                } 
+            }
+        }
+    }
+}
+/* 영업사원메인 끝 */
+
+/* --고객등록 페이지-- */
+/* 기본정보 */
+.formWrap {padding: 20px; border: 1px solid var(--colDEDE); margin-bottom: 20px;
+    > b {display: block; font-size: 15px; font-weight: bold; margin-bottom: 30px;}
+    > .infoBox {width: 90%; display: flex;  flex-wrap: wrap; gap:30px 40px ;
+        > div{ width: calc(100% / 3 - 27px); display: flex; flex-direction: column;
+            > strong{ font-weight: bold; margin-bottom: 10px;}
+           
+        }
+        
+          .userMemo{ flex: 1; margin-bottom: 30px;}
+      
+    }
+    .btnBox{text-align: end; 
+        button:last-of-type {margin-left:30px;}
+    }
+    input[type='text'], input[type='date']{ padding:8px 10px; }
+
+}
+details{
+    &[open] summary{ margin-bottom: 30px; }
+    summary{ list-style-type: none; display: flex; justify-content: space-between;  font-size: 15px; font-weight: bold; cursor: pointer;
+             &::after{content: url(../../public/images/btn_arrow_open.svg);transition: all 1.5s;}
+             [open] &::after{ transform: rotate(180deg); transition: all 1.5s;}
+    }
+    form{ 
+        > section { width: 90%; display: flex; gap: 40px; 
+            >div{display: flex; flex-direction: column; width: calc( 100% / 3 - 23px);
+             >strong{font-weight: bold; margin-bottom: 10px; }
+             .payItemBox{  display: flex; flex-wrap: wrap; gap: 15px 30px;
+                >div { display: flex; align-items: center; 
+                    label{ cursor: pointer;}
+                }
+             }
+            }
+        }
+    }
+    hr{ margin: 30px 0; background-color: var(--colF1F1); border: none; height: 1px;}
+    .analyst{  width: 100%; flex-direction: initial;gap: 15px 30px;  flex-wrap: wrap; flex: 30% 1 1;
+        > strong{ width: 100%;  flex: 100% ; }
+        > div{ width: calc(100% / 6 - 25px);}
+    }
+}
+
+
+   

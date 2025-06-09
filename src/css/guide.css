@@ -7,7 +7,7 @@
     --colF1F1:#F1F1F1;
     --colF8F8:#F8F8F8;
     --colDEDE:#DEDEDE;
-    
+
     --point:#E02C28;
     --PSub01:#FFEDEC;
     --PSub02:#FFF9F9;
@@ -15,9 +15,57 @@
 
 
 }
-
-
+h2 {font-size: 27px; font-weight: bold;}
+h3{ font-size: 20px; font-weight: bold; margin-bottom: 20px;}
 input[type='text'], 
-input[type='password']{ border: 1px solid var(--colDEDE); border-radius: 4px;}
+input[type='password'],input[type='date']
+{ border: 1px solid var(--colDEDE); border-radius: 4px;}
 
-.btn_01 { background-color: var(--point); color: #fff;border: none; border-radius: 4px; font-weight: bold;}
+/* 버튼 */
+.btn_01 { background-color: var(--point); color: #fff;border: none; border-radius: 4px; font-weight: bold; padding: 8px 30px}
+.btn_02 { background-color: var(--colBBBB); color: #fff;border: none; border-radius: 4px; font-weight: bold; padding: 8px 30px}
+
+select,
+::picker(select) {
+  appearance: base-select;
+}
+select{
+    position: relative;
+    &:open{ border: 1px solid var(--point);}
+    &::picker(select){border: none; border-radius: 4px; box-shadow:0 0  20px 0px rgba(0, 0, 0, 0.1); position: absolute; top: 3px;}
+    &::picker-icon{opacity: 0;}
+    background: url(../../public/images/Polygon.svg) no-repeat right 10px center;
+
+
+    border: 1px solid var(--colDEDE);
+    border-radius: 4px;
+    padding: 8px 10px;
+
+    /* -o-appearance: none; */
+    /* -webkit-appearance: none; */
+    /* -moz-appearance: none;  */
+    /* appearance: none; */
+ 
+    > option{ margin: 5px;  border-radius: 4px ;
+        &:hover{background-color: #FFEDEC; font-weight: bold;}
+        &::checkmark{ display: none; }
+    }
+}
+
+input[type='date']{position: relative; padding:8px 10px; 
+    /* &:last-child::after{ content: '-'; width: 10px; position: absolute;left: -10px; z-index: 99;} */
+}
+input[type='radio'] { appearance: none; width: 16px; height: 16px; margin: 0 6px 0 0  ; background: url(../../public/images/radio_off.svg); 
+    &:checked{ background: url(../../public/images/radio_on.svg);}
+}
+
+/* 날짜 input */
+.dateItem {width: 100%; display: flex; justify-content: space-between; position: relative;
+    &:last-child::after { content: '-';position: absolute;  right: 50%; top: 30%;    }
+    > input[type]{ width: calc(100% / 2 - 32px);   }
+}
+
+
+.h2Tit{
+    display: flex; justify-content: space-between; align-items: center; margin-bottom:40px ;
+}
