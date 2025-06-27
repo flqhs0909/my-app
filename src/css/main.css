@@ -84,7 +84,7 @@ details{
             >div{display: flex; flex-direction: column; width: calc( 100% / 3 - 23px);
              >strong{font-weight: bold; margin-bottom: 10px; }
              .payItemBox{  display: flex; flex-wrap: wrap; gap: 15px 30px;
-                >div { display: flex; align-items: center; 
+                >div { display: flex; align-items: center; min-width: 125px;
                     label{ cursor: pointer;}
                 }
              }
@@ -94,9 +94,31 @@ details{
     hr{ margin: 30px 0; background-color: var(--colF1F1); border: none; height: 1px;}
     .analyst{  width: 100%; flex-direction: initial;gap: 15px 30px;  flex-wrap: wrap; flex: 30% 1 1;
         > strong{ width: 100%;  flex: 100% ; }
-        > div{ width: calc(100% / 6 - 25px);}
+        > div{ width: calc(100% / 6 );
+            > label{font-size: 16px;}
+        }
+    }
+    .payText{width: 100%; margin-bottom: 30px;}
+    .payBtn {display: block; text-align: end;}
+
+}
+.arrayWrap{ 
+    &:not(:first-child)::after { border-bottom: 1px solid var(--colF8F8); }
+}
+.arrayListTit{ display: flex; align-items: center; background-color: var(--colF8F8); padding: 20px 10px;
+    li {font-weight: bold;width: 14.58%; display: flex; align-items: center; 
+        &:first-child{width: auto;}
+        &:not(:first-child)::before{ content: '';display: block; width: 2px; height: 13px; margin: 0 10px; background-color: var(--colDEDE);}
+        &:nth-of-type(3){flex: 1;}
     }
 }
-
-
+.arrayListContant{  
+    li{display: flex; align-items: center; padding: 20px 10px;  padding: 12px 10px ; border-bottom: 1px solid var(--colDEDE);
+    :not(:first-child) { width: 14.58%; display: block; padding-left: 21px;}
+     /* > b, p, strong , i , time{ width: 14.58%;} */
    
+    input[type='checkbox']{width: 16px; }
+    p{flex: 1; text-wrap: wrap;}
+
+    }
+}

@@ -17,13 +17,12 @@
 }
 h2 {font-size: 27px; font-weight: bold;}
 h3{ font-size: 20px; font-weight: bold; margin-bottom: 20px;}
-input[type='text'], 
-input[type='password'],input[type='date']
-{ border: 1px solid var(--colDEDE); border-radius: 4px;}
+input[type='text'], input[type='password'],input[type='date']{ border: 1px solid var(--colDEDE); border-radius: 4px;}
 
 /* 버튼 */
-.btn_01 { background-color: var(--point); color: #fff;border: none; border-radius: 4px; font-weight: bold; padding: 8px 30px}
-.btn_02 { background-color: var(--colBBBB); color: #fff;border: none; border-radius: 4px; font-weight: bold; padding: 8px 30px}
+.btn_01,.btn_02 { cursor: pointer;color: #fff;border: none; border-radius: 4px; font-weight: bold; padding: 8px 30px}
+.btn_01 { background-color: var(--point);}
+.btn_02 { background-color: var(--colBBBB); }
 
 select,
 ::picker(select) {
@@ -58,6 +57,11 @@ input[type='date']{position: relative; padding:8px 10px;
 input[type='radio'] { appearance: none; width: 16px; height: 16px; margin: 0 6px 0 0  ; background: url(../../public/images/radio_off.svg); 
     &:checked{ background: url(../../public/images/radio_on.svg);}
 }
+input[type='checkbox']{appearance: none; width: 16px; height: 16px; background: url(../../public/images/btn_check_off.svg);
+    &:checked{  background: url(../../public/images/btn_check_on.svg);}
+}
+
+textarea{ border: 1px solid var(--colDEDE); resize: none; height: 96px;}
 
 /* 날짜 input */
 .dateItem {width: 100%; display: flex; justify-content: space-between; position: relative;

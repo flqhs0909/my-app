@@ -47,9 +47,10 @@ nav{min-width:15.625%; background-color: #333333;
     .loginAera{ display: flex; justify-content: center; align-items: center; flex-direction: column;
         > img {margin-bottom: 40px;}
         > form {width: 340px; padding:60px 40px ; display: flex; flex-direction: column; justify-content: center;  box-shadow:0 0  40px 0px rgba(0, 0, 0, 0.1);margin-bottom: 20px;
-            > p {text-align: center; margin-bottom: 20px; font-size: 20px ; font-weight: bold; margin-bottom: 20px ;}
+            > strong {text-align: center; margin-bottom: 20px; font-size: 20px ; font-weight: bold; margin-bottom: 20px ;}
             > input { margin: 10px 0; padding: 12px 10px;}
             > button {padding: 12px 0; margin: 20px 0; }
+            >p {color: var(--point );}
         }
     }
     >  p{ font-size: 12px; color: var(--colBBBB);}   
