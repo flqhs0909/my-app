@@ -1,13 +1,12 @@
-import React from 'react'
+import React from "react";
 
-export default function PageName({PageTitle ,showBtn}) {
-
+export default function PageName({ PageTitle, shouldShow, label_btn }) {
   return (
     <>
-        <div className='h2Tit'>
-            <h2>{PageTitle}</h2>
-            {showBtn && <button className='btn_01'>대량 고객 등록</button>}
+      <div className="h2Tit">
+        <h2>{PageTitle}</h2>
+        {shouldShow && <button className="btn_01">{label_btn}</button>}
       </div>
     </>
-  )
+  );
 }

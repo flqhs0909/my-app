@@ -1,75 +1,181 @@
-:root{
+:root {
+  --col2222: #222222;
+  --col6666: #666666;
+  --col9999: #999999;
+  --colBBBB: #bbbbbb;
+  --colF1F1: #f1f1f1;
+  --colF8F8: #f8f8f8;
+  --colDEDE: #dedede;
 
-    --col2222:#222222;
-    --col6666:#666666;
-    --col9999:#999999;
-    --colBBBB:#BBBBBB;
-    --colF1F1:#F1F1F1;
-    --colF8F8:#F8F8F8;
-    --colDEDE:#DEDEDE;
-
-    --point:#E02C28;
-    --PSub01:#FFEDEC;
-    --PSub02:#FFF9F9;
-
-
-
+  --point: #e02c28;
+  --PSub01: #ffedec;
+  --PSub02: #fff9f9;
 }
-h2 {font-size: 27px; font-weight: bold;}
-h3{ font-size: 20px; font-weight: bold; margin-bottom: 20px;}
-input[type='text'], input[type='password'],input[type='date']{ border: 1px solid var(--colDEDE); border-radius: 4px;}
+h2 {
+  font-size: 27px;
+  font-weight: bold;
+}
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+input[type="text"],
+input[type="password"],
+input[type="date"] {
+  border: 1px solid var(--colDEDE);
+  border-radius: 4px;
+}
 
 /* 버튼 */
-.btn_01,.btn_02 { cursor: pointer;color: #fff;border: none; border-radius: 4px; font-weight: bold; padding: 8px 30px}
-.btn_01 { background-color: var(--point);}
-.btn_02 { background-color: var(--colBBBB); }
+.btn_01,
+.btn_02,
+.btn_03 {
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 8px 30px;
+  border: none;
+}
+
+.btn_01,
+.btn_02 {
+  color: #fff;
+  font-weight: bold;
+}
+.btn_01 {
+  background-color: var(--point);
+}
+.btn_02 {
+  background-color: var(--colBBBB);
+}
+.btn_03 {
+  background-color: var(--colF1F1);
+}
 
 select,
 ::picker(select) {
   appearance: base-select;
 }
-select{
-    position: relative;
-    &:open{ border: 1px solid var(--point);}
-    &::picker(select){border: none; border-radius: 4px; box-shadow:0 0  20px 0px rgba(0, 0, 0, 0.1); position: absolute; top: 3px;}
-    &::picker-icon{opacity: 0;}
-    background: url(../../public/images/Polygon.svg) no-repeat right 10px center;
-
-
-    border: 1px solid var(--colDEDE);
+select {
+  position: relative;
+  &:open {
+    border: 1px solid var(--point);
+  }
+  &::picker(select) {
+    border: none;
     border-radius: 4px;
-    padding: 8px 10px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 3px;
+  }
+  &::picker-icon {
+    opacity: 0;
+  }
+  background: url(../../public/images/Polygon.svg) no-repeat right 10px center;
 
-    /* -o-appearance: none; */
-    /* -webkit-appearance: none; */
-    /* -moz-appearance: none;  */
-    /* appearance: none; */
- 
-    > option{ margin: 5px;  border-radius: 4px ;
-        &:hover{background-color: #FFEDEC; font-weight: bold;}
-        &::checkmark{ display: none; }
+  border: 1px solid var(--colDEDE);
+  border-radius: 4px;
+  padding: 8px 10px;
+
+  /* -o-appearance: none; */
+  /* -webkit-appearance: none; */
+  /* -moz-appearance: none;  */
+  /* appearance: none; */
+
+  > option {
+    margin: 5px;
+    border-radius: 4px;
+    &:hover {
+      background-color: #ffedec;
+      font-weight: bold;
     }
+    &::checkmark {
+      display: none;
+    }
+  }
+}
+input[type="text"]:disabled {
+  background-color: var(--colF1F1);
+  border: 1px solid var(--colDEDE);
+}
+input[type="text"],
+input[type="date"] {
+  padding: 8px 10px;
 }
 
-input[type='date']{position: relative; padding:8px 10px; 
-    /* &:last-child::after{ content: '-'; width: 10px; position: absolute;left: -10px; z-index: 99;} */
+input[type="date"] {
+  position: relative;
+  padding: 8px 10px;
+  /* &:last-child::after{ content: '-'; width: 10px; position: absolute;left: -10px; z-index: 99;} */
 }
-input[type='radio'] { appearance: none; width: 16px; height: 16px; margin: 0 6px 0 0  ; background: url(../../public/images/radio_off.svg); 
-    &:checked{ background: url(../../public/images/radio_on.svg);}
+input[type="radio"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  margin: 0 6px 0 0;
+  background: url(../../public/images/radio_off.svg);
+  &:checked {
+    background: url(../../public/images/radio_on.svg);
+  }
 }
-input[type='checkbox']{appearance: none; width: 16px; height: 16px; background: url(../../public/images/btn_check_off.svg);
-    &:checked{  background: url(../../public/images/btn_check_on.svg);}
+input[type="checkbox"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: url(../../public/images/btn_check_off.svg);
+  &:checked {
+    background: url(../../public/images/btn_check_on.svg);
+  }
 }
 
-textarea{ border: 1px solid var(--colDEDE); resize: none; height: 96px;}
+textarea {
+  border: 1px solid var(--colDEDE);
+  resize: none;
+  height: 96px;
+}
 
 /* 날짜 input */
-.dateItem {width: 100%; display: flex; justify-content: space-between; position: relative;
-    &:last-child::after { content: '-';position: absolute;  right: 50%; top: 30%;    }
-    > input[type]{ width: calc(100% / 2 - 32px);   }
+.dateItem {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  &:last-child:after {
+    content: "-";
+    position: absolute;
+    right: 50%;
+    top: 30%;
+  }
+  > input[type] {
+    width: calc(100% / 2 - 32px);
+  }
 }
 
+/* 타이틀 */
+.h2Tit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
 
-.h2Tit{
-    display: flex; justify-content: space-between; align-items: center; margin-bottom:40px ;
+/* 버튼 */
+.bottomtBtn {
+  display: flex;
+  justify-content: end;
+  gap: 0 15px;
+  margin-top: 30px;
+}
+
+/* 복수선택 가능 */
+.plural::after {
+  content: "(복수 선택 가능)";
+  color: var(--col9999);
+  margin: 0 10px;
+}
+hr {
+  margin: 30px 0;
+  background-color: var(--colF1F1);
+  border: none;
+  height: 1px;
 }

@@ -9,6 +9,7 @@ import SignUp from '../pages/SignUp';
 import Test from '../pages/Test';
 import BusinessMain from '../pages/BusinessMain';
 import UserEdit from '../pages/UserEdit';
+import CustomerList from '../pages/CustomerList';
 
 export default function Routers() {
   return (
@@ -19,6 +20,7 @@ export default function Routers() {
                 <Route path='/businessMain' element={ <BusinessMain/>}></Route>
                 <Route path='/signUp' element={ <SignUp/>}></Route>
                 <Route path='/userEdit' element={ <UserEdit/>}></Route>
+                <Route path='/CustomerList' element={ <CustomerList/>}></Route>
                 <Route path='/test' element={ <Test/>}></Route>
             </Route>
         </Routes> 

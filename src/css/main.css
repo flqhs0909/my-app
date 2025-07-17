@@ -1,124 +1,463 @@
-
 /* 공지사항 알림 */
-.AlarmBox {display: flex; padding:12px 20px ; background-color: var(--colF1F1); border-radius: 4px; margin-bottom: 60px;
-    > img{margin-right: 10px;  }
-    strong {font-weight: bold; font-size: 13px; margin-right: 40px;}
-    time{color: var(--col9999);margin-right: 10px;}
-    p{ 
-        &::after{content:url(../../public/images/ico_new.svg); clear: both;  margin: 0 8px;}
+.AlarmBox {
+  display: flex;
+  padding: 12px 20px;
+  background-color: var(--colF1F1);
+  border-radius: 4px;
+  margin-bottom: 60px;
+  > img {
+    margin-right: 10px;
+  }
+  strong {
+    font-weight: bold;
+    font-size: 13px;
+    margin-right: 40px;
+  }
+  time {
+    color: var(--col9999);
+    margin-right: 10px;
+  }
+  p {
+    &::after {
+      content: url(../../public/images/ico_new.svg);
+      clear: both;
+      margin: 0 8px;
     }
-} 
-/*영업사원 매인 - 매출현황 */
-.rangeWrap{ display: flex; border: 1px solid var(--colDEDE); width: 100%; padding: 20px; margin-bottom: 60px;
-    .rangeArea{ width: 50%; margin: 0 40px; align-content: center; 
-        progress{appearance: none; width: 100%; height: 40px; 
-            &::-webkit-progress-bar{ background: #FFFFFF;  }
-            &::-webkit-progress-value{ background:linear-gradient(to right, #A51E23 ,#E02C28);}
-            &::-webkit-progress-inner-element{ border: 1px solid var(--colDEDE);}
-
-        }
-    }
-    .achieveArea{ margin-left: 20px;
-        width: 36%;
-        > strong{font-size: 15px; font-weight: bold; margin-bottom:12px; display: block;}
-        >table { width: 100%; margin-bottom: 12px;
-            tr { border-width: 1px 0; border-style: solid; border-color: var(--colF1F1); padding: 15px 0;
-                > th {padding: 12px 10px ; background-color: var(--colF8F8);}
-                &:last-child{ color: var(--point);}
-            } 
-        }
-        > p{ color: var(--point); font-weight: bold; text-align: center;}
-     }
+  }
 }
-.tableArea{ 
-    .tTit{
-        display: flex; justify-content: space-between; align-items: center;
+/*영업사원 매인 - 매출현황 */
+.rangeWrap {
+  display: flex;
+  border: 1px solid var(--colDEDE);
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 60px;
+  .rangeArea {
+    width: 50%;
+    margin: 0 40px;
+    align-content: center;
+    progress {
+      appearance: none;
+      width: 100%;
+      height: 40px;
+      &::-webkit-progress-bar {
+        background: #ffffff;
+      }
+      &::-webkit-progress-value {
+        background: linear-gradient(to right, #a51e23, #e02c28);
+      }
+      &::-webkit-progress-inner-element {
+        border: 1px solid var(--colDEDE);
+      }
     }
-    > table {width: 100%; 
-        thead{
-            tr{ 
-              th { text-align: left; padding: 20px 10px;  background-color: var(--colF8F8); font-weight: bold;
-                &:not(:first-child)::before{ content: '';display: inline-block; width: 1px; height: 12px; margin: 0 10px; background-color: var(--colDEDE);}
-            }
-            }
-        }
-        > tbody{
-            tr{ border-bottom: 1px solid var(--colF1F1);
-                td{
-                    padding: 20px 10px;
-                    &:not(:first-child){ padding-left: 33px;}
-                } 
-            }
-        }
+  }
+  .achieveArea {
+    margin-left: 20px;
+    width: 36%;
+    > strong {
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      display: block;
     }
+    > table {
+      width: 100%;
+      margin-bottom: 12px;
+      tr {
+        border-width: 1px 0;
+        border-style: solid;
+        border-color: var(--colF1F1);
+        padding: 15px 0;
+        > th {
+          padding: 12px 10px;
+          background-color: var(--colF8F8);
+        }
+        &:last-child {
+          color: var(--point);
+        }
+      }
+    }
+    > p {
+      color: var(--point);
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+}
+.tableArea {
+  .tTit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  > table {
+    width: 100%;
+    thead {
+      tr {
+        th {
+          text-align: left;
+          padding: 20px 10px;
+          background-color: var(--colF8F8);
+          font-weight: bold;
+          &:not(:first-child)::before {
+            content: "";
+            display: inline-block;
+            width: 1px;
+            height: 12px;
+            margin: 0 10px;
+            background-color: var(--colDEDE);
+          }
+        }
+      }
+    }
+    > tbody {
+      tr {
+        border-bottom: 1px solid var(--colF1F1);
+        td {
+          padding: 20px 10px;
+          &:not(:first-child) {
+            padding-left: 33px;
+          }
+        }
+      }
+    }
+  }
 }
 /* 영업사원메인 끝 */
 
 /* --고객등록 페이지-- */
 /* 기본정보 */
-.formWrap {padding: 20px; border: 1px solid var(--colDEDE); margin-bottom: 20px;
-    > b {display: block; font-size: 15px; font-weight: bold; margin-bottom: 30px;}
-    > .infoBox {width: 90%; display: flex;  flex-wrap: wrap; gap:30px 40px ;
-        > div{ width: calc(100% / 3 - 27px); display: flex; flex-direction: column;
-            > strong{ font-weight: bold; margin-bottom: 10px;}
-           
-        }
-        
-          .userMemo{ flex: 1; margin-bottom: 30px;}
-      
+.formWrap {
+  padding: 20px;
+  border: 1px solid var(--colDEDE);
+  margin-bottom: 20px;
+  > b {
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  .inputBox {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 40px;
+    > div {
+      width: calc(100% / 3 - 27px);
+      display: flex;
+      flex-direction: column;
+      > strong {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
     }
-    .btnBox{text-align: end; 
-        button:last-of-type {margin-left:30px;}
-    }
-    input[type='text'], input[type='date']{ padding:8px 10px; }
 
-}
-details{
-    &[open] summary{ margin-bottom: 30px; }
-    summary{ list-style-type: none; display: flex; justify-content: space-between;  font-size: 15px; font-weight: bold; cursor: pointer;
-             &::after{content: url(../../public/images/btn_arrow_open.svg);transition: all 1.5s;}
-             [open] &::after{ transform: rotate(180deg); transition: all 1.5s;}
+    .userMemo {
+      width: 100%;
     }
-    form{ 
-        > section { width: 90%; display: flex; gap: 40px; 
-            >div{display: flex; flex-direction: column; width: calc( 100% / 3 - 23px);
-             >strong{font-weight: bold; margin-bottom: 10px; }
-             .payItemBox{  display: flex; flex-wrap: wrap; gap: 15px 30px;
-                >div { display: flex; align-items: center; min-width: 125px;
-                    label{ cursor: pointer;}
-                }
-             }
+  }
+}
+details {
+  &[open] summary {
+    margin-bottom: 30px;
+  }
+  summary {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    &::after {
+      content: url(../../public/images/btn_arrow_open.svg);
+      transition: all 1.5s;
+    }
+    [open] &::after {
+      transform: rotate(180deg);
+      transition: all 1.5s;
+    }
+  }
+  > form {
+    > section {
+      width: 90%;
+      display: flex;
+      gap: 40px;
+      > div {
+        display: flex;
+        flex-direction: column;
+        width: calc(100% / 3 - 23px);
+        > strong {
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+
+        .payItemBox {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 15px 30px;
+          > div {
+            display: flex;
+            align-items: center;
+            min-width: 125px;
+            label {
+              cursor: pointer;
             }
+          }
         }
+      }
     }
-    hr{ margin: 30px 0; background-color: var(--colF1F1); border: none; height: 1px;}
-    .analyst{  width: 100%; flex-direction: initial;gap: 15px 30px;  flex-wrap: wrap; flex: 30% 1 1;
-        > strong{ width: 100%;  flex: 100% ; }
-        > div{ width: calc(100% / 6 );
-            > label{font-size: 16px;}
-        }
-    }
-    .payText{width: 100%; margin-bottom: 30px;}
-    .payBtn {display: block; text-align: end;}
+  }
 
-}
-.arrayWrap{ 
-    &:not(:first-child)::after { border-bottom: 1px solid var(--colF8F8); }
-}
-.arrayListTit{ display: flex; align-items: center; background-color: var(--colF8F8); padding: 20px 10px;
-    li {font-weight: bold;width: 14.58%; display: flex; align-items: center; 
-        &:first-child{width: auto;}
-        &:not(:first-child)::before{ content: '';display: block; width: 2px; height: 13px; margin: 0 10px; background-color: var(--colDEDE);}
-        &:nth-of-type(3){flex: 1;}
+  .analyst {
+    width: 100%;
+    flex-direction: initial;
+    gap: 15px 30px;
+    flex-wrap: wrap;
+    flex: 30% 1 1;
+    > strong {
+      width: 100%;
+      flex: 100%;
     }
+    > div {
+      width: calc(100% / 6);
+      > label {
+        font-size: 16px;
+      }
+    }
+  }
+  .payText {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
-.arrayListContant{  
-    li{display: flex; align-items: center; padding: 20px 10px;  padding: 12px 10px ; border-bottom: 1px solid var(--colDEDE);
-    :not(:first-child) { width: 14.58%; display: block; padding-left: 21px;}
-     /* > b, p, strong , i , time{ width: 14.58%;} */
-   
-    input[type='checkbox']{width: 16px; }
-    p{flex: 1; text-wrap: wrap;}
+.arrayWrap {
+  &:not(:first-child)::after {
+    border-bottom: 1px solid var(--colF8F8);
+  }
+}
+.arrayListTit {
+  display: flex;
+  align-items: center;
+  background-color: var(--colF8F8);
+  padding: 20px 10px;
+  li {
+    font-weight: bold;
+    width: 14.58%;
+    display: flex;
+    align-items: center;
+    &:first-child {
+      width: auto;
+    }
+    &:not(:first-child)::before {
+      content: "";
+      display: block;
+      width: 2px;
+      height: 13px;
+      margin: 0 10px;
+      background-color: var(--colDEDE);
+    }
+    &:nth-of-type(3) {
+      flex: 1;
+    }
+  }
+}
+.arrayListContant {
+  li {
+    display: flex;
+    align-items: center;
+    padding: 20px 10px;
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--colDEDE);
+    :not(:first-child) {
+      width: 14.58%;
+      display: block;
+      padding-left: 21px;
+    }
+    /* > b, p, strong , i , time{ width: 14.58%;} */
 
+    input[type="checkbox"] {
+      width: 16px;
     }
+    p {
+      flex: 1;
+      text-wrap: wrap;
+    }
+  }
 }
+/* --고객등록 페이지 end-- */
+
+/* 통합고객목록 -검색항목*/
+/* search  */
+.listCheck {
+  flex: 1;
+  > ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    gap: 0px 30px;
+    > li {
+      width: calc(100% / 4);
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+
+      > input[type="checkBox"] {
+        margin-right: 6px;
+        cursor: pointer;
+      }
+      label {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.periodData {
+  display: flex;
+
+  > .datainput {
+    justify-content: space-between;
+  }
+}
+.timeData {
+  display: flex;
+  padding: 8px 0 15px;
+  gap: 20px;
+  > div {
+    display: flex;
+    align-items: center;
+  }
+}
+.searchSetting {
+  margin-bottom: 30px;
+}
+/* 통합고객 목록- 목록 */
+.catalogList {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--colDEDE);
+  padding-bottom: 15px;
+  align-items: center;
+  > h3 {
+    margin-bottom: 0;
+  }
+  > ul {
+    display: flex;
+    align-items: center;
+    li {
+      margin-left: 7px;
+    }
+  }
+}
+.members {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  > li {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    &::before {
+      content: "";
+      display: block;
+      width: 14px;
+      height: 14px;
+      margin-right: 6px;
+      border-radius: 50%;
+    }
+  }
+  li.free::before {
+    background-color: #fea89b;
+  }
+  li.vip::before {
+    background-color: #fdbf6c;
+  }
+  li.vvip::before {
+    background-color: #fcd665;
+  }
+  li.invest::before {
+    background-color: #7ddb83;
+  }
+  li.edu::before {
+    background-color: #74cbca;
+  }
+  li.sclub::before {
+    background-color: #79c0fc;
+  }
+  li.refund::before {
+    background-color: #bf9dfc;
+  }
+}
+.listOption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  > div {
+    display: flex;
+  }
+  > .totalPage {
+    strong {
+      font-size: 15px;
+      font-weight: bold;
+    }
+    small {
+      color: var(--col9999);
+    }
+  }
+}
+.listHeader_01 {
+  width: 100%;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  background-color: var(--colF8F8);
+  overflow-y: scroll;
+  > li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    text-align: start;
+    padding: 20px 0px;
+    &:not(:first-child)::before {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 16px;
+      background-color: var(--colDEDE);
+      margin: 0 10px;
+    }
+    span {
+      flex: 1;
+    }
+  }
+}
+.listContent {
+  width: 100%;
+
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  > li {
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid var(--colDEDE);
+    padding: 20px 10px;
+  }
+}
+.chose {
+  flex: 0 0 1.6rem;
+}
+.hold {
+  flex: 0 0 53px;
+}
+/* .memberList li:not(:first-child)::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 10px;
+  background-color: #000;
+} */
